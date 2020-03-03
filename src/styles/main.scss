@@ -5,30 +5,134 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "OpenSans-Italic";
+    src: url("../fonts/OpenSansItalic.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/OpenSansItalic.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/OpenSansItalic.otf") format("opentype"), /* Open Type Font */
+      url("../fonts/OpenSansItalic.svg") format("svg"), /* Legacy iOS */
+      url("../fonts/OpenSansItalic.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/OpenSansItalic.woff2") format("woff2"), /* Modern Browsers */
+      url("../fonts/OpenSansItalic.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+$light-color:#fff;
+$accent-color:#65e496;
 body {
     font-family: 'Roboto Slab', serif ;
     }
+.wrap{
+    max-width: 1170px;
+    margin: 0 auto;
+}
 .page-main {
     background-image: url(../img/bg-main.png);
     background-repeat: no-repeat;
     background-size: cover;
+    color:$light-color;
+    padding-bottom: 161px;
     }
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 38px;
+    padding-bottom: 166px;
     &__logo{
         display: block;
         width: 137px;
         height: 28px;
         background-image: url(../img/logo.svg);
+        background-repeat: no-repeat;
     }
     &-list{
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
+        font-family: 'Open Sans', sans-serif ;
         &__item{
-            margin-left: 20px;
+            margin-left: 22px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+            transition: 0.2s;
+            &:hover {
+                border-bottom: 3px solid $accent-color;
+            }
         }
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+        &__link {
+            color:$light-color;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+.block-text {
+    flex-basis: calc(90% - 500px);
+    margin-left: 54px;
+    &__name {
+        font-family: 'Open Sans', sans-serif ;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        margin-bottom: 30px;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        margin-bottom: 40px;
+        span {
+            display: block;
+            color: $accent-color;
+            font-size: 18px;
+            margin-top: 9px;
+            letter-spacing: 0.9px;
+        }
+    }
+    &__description {
+        font-family: 'Open Sans', sans-serif ;
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 24px;
+        letter-spacing: 0.7px;
+    }
+    &__btn {
+        display: block;
+        background-color: $accent-color;
+        color: $light-color;
+        text-decoration: none;
+        max-width: 250px;
+        border-radius: 3px;
+        text-align: center;
+        margin-top: 48px;
+        margin-bottom: 19px;
+        padding: 14px 0;
+        letter-spacing: 0.7px;
+    }
+    &__footnote {
+        font-family: "OpenSans-Italic";
+        font-size: 12px;
+        letter-spacing: 0.3px;
+    }
+}
+.block-book {
+    display: flex;
+    justify-content: flex-start;
+    &-demo {
+        display: block;
+        width: 445px;
+        height: 639px;
+        background-image: url(../img/book.svg);
+        background-repeat: no-repeat;
+        flex-basis: 445px;
     }
 }
