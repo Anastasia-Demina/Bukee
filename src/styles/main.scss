@@ -23,6 +23,8 @@ h1, h2, h3, h4, p {
   }
 $light-color:#fff;
 $accent-color:#65e496;
+$title-color:#44444f;
+$text-color:#696980;
 body {
     font-family: 'Roboto Slab', serif ;
     }
@@ -92,7 +94,7 @@ body {
         margin-bottom: 30px;
         &_top {
             margin-top: 16px;
-            color: #696980;
+            color: $text-color;
         }
     }
     &__title {
@@ -101,7 +103,7 @@ body {
         letter-spacing: 1.8px;
         margin-bottom: 40px;
         &_color {
-            color: #44444f;
+            color: $title-color;
         }
         span {
             display: block;
@@ -118,7 +120,7 @@ body {
         margin-bottom: 24px;
         letter-spacing: 0.75px;
         &_color {
-            color: #696980;
+            color: $text-color;
         }
     }
     &__btn {
@@ -166,5 +168,25 @@ body {
     &__img {
         margin-top: 47px;
         margin-right: 48px;
+    }
+}
+.block-counter {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 157px;
+    p {
+        font-family: 'Open Sans', sans-serif ;
+        text-align: center;
+        font-size: 18px;
+        color: $text-color;
+        margin-bottom: 160px;
+        span {
+            display: block;
+            font-family: 'Roboto Slab', serif ;
+            font-size: 80px;
+            color: $accent-color;
+            font-weight: 100;
+            margin-bottom: 13px;
+        }
     }
 }
