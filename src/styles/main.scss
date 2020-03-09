@@ -269,6 +269,8 @@ body {
                 width: 86px;
                 margin-left: 25px;
                 &>li {
+                    display: inline-block;
+                    vertical-align: middle;
                     &>a {
                         font-size: 18px;
                         color: $accent-color;
