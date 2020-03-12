@@ -57,12 +57,14 @@ body {
     background-size: cover;
     color:$light-color;
     padding-bottom: 161px;
+    opacity: .99;
     }
 .page {
     padding-top: 161px;
     padding-bottom: 160px;
     &_gray {
         background-color:$bg-light-color ;
+        opacity: .99;
     }
     &__title {
         font-size: 48px;
@@ -122,6 +124,9 @@ body {
 .block-text {
     flex-basis: calc(92% - 500px);
     margin-left: 52px;
+    &_right {
+        flex-basis: calc(92% - 507px);
+    }
     &_left {
         margin-left: 0;
     }
@@ -131,6 +136,11 @@ body {
         letter-spacing: 1px;
         margin-bottom: 42px;
         margin-top: 2px;
+        &_right {
+            margin-top: -2px;
+            margin-bottom: 30px;
+            color:$text-color;
+        }
         &_top {
             margin-top: 16px;
             color: $text-color;
@@ -141,6 +151,10 @@ body {
         font-weight: 700;
         letter-spacing: 1.8px;
         margin-bottom: 40px;
+        &_right {
+            margin-bottom: 43px;
+            color: $title-color;
+        }
         &_color {
             color: $title-color;
         }
@@ -152,20 +166,35 @@ body {
             letter-spacing: 0.9px;
         }
     }
+    &__date {
+        font-family: 'Open Sans', sans-serif ;
+        letter-spacing: 0.7px;
+        color: $text-color;
+    }
     &__description {
         font-family: 'Open Sans', sans-serif ;
         font-size: 15px;
         line-height: 24px;
         margin-bottom: 24px;
-        letter-spacing: 0.75px;
+        letter-spacing: 0.7px;
+        color: $text-color;
         &_color {
-            color: $text-color;
+            color: $light-color;
         }
+    }
+    &__desc {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 2px;
+        letter-spacing: 0.8px;
+        margin-bottom: 17px;
+        color:$title-color;
     }
     &__btn {
         display: block;
         font-size: 18px;
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
+        position: relative;
         color: $light-color;
         text-decoration: none;
         max-width: 250px;
@@ -175,6 +204,43 @@ body {
         margin-bottom: 18px;
         padding: 12px 0;
         letter-spacing: 0.7px;
+        &::before {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #58b988;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+        }
+    }
+    &__button {
+        display: block;
+        font-size: 18px;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
+        position: relative;
+        color: $light-color;
+        text-decoration: none;
+        border-radius: 3px;
+        text-align: center;
+        padding: 12px 0;
+        letter-spacing: 0.7px;
+        margin-top: 19px;
+        margin-bottom: 58px;
+        max-width: 137px;
+        &::before {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+        }
     }
     &__footnote {
         font-family: "OpenSans-Italic";
@@ -233,10 +299,18 @@ body {
         position: absolute;
         z-index: -1;
         right: 0;
+        &_left {
+            right: inherit;
+        }
     }
     &__img {
         margin-top: 47px;
         margin-right: 48px;
+        &_left {
+            margin-top: 48px;
+            margin-right: 0;
+            margin-left: 50px;
+        }
     }
 }
 .block-counter {
@@ -273,7 +347,8 @@ body {
     }
     &__btn {
         border: none;
-        background-color: $accent-color;
+        background: linear-gradient(to top left, #65e49c, #65e4af);
+        position: relative;
         color: $light-color;
         border-radius: 3px;
         text-align: center;
@@ -281,6 +356,18 @@ body {
         padding: 16px 44px;
         font-size: 18px;
         margin-top: 37px;
+        &::before {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+            left: 0;
+        }
     }
     &-text {
         flex-basis: 41%;
@@ -347,16 +434,32 @@ body {
 }
 .block-other {
     &__btn {
+        background: linear-gradient(to top left, #65e49c, #65e4af);
         margin: auto;
         margin-top: 85px;
         margin-bottom: 0;
         max-width: 220px;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            position: absolute;
+            z-index: -1;
+            bottom: -2px;
+            border-radius: 3px;
+        }
     }
     &-book {
         display: flex;
         justify-content: space-around;
         .block-books {
             &-demo {
+                display: block;
+                margin: 0 auto 35px;
+                flex-basis: 500px;
                 position: relative;
                 background-image: url(../img/book_small.svg);
                 background-repeat: no-repeat;
