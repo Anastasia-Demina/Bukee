@@ -525,3 +525,65 @@ body {
         }
     }
 }
+.block-blog {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: $bg-dark-color;
+            margin-top: 16px;
+            letter-spacing: 0.9px;
+            margin-bottom: 4px;
+        }
+        p {
+            color: #80809b;
+            font-family: 'Open Sans', sans-serif ;
+        }
+        &__img {
+            width: 369px;
+            height: 224px;
+            overflow: hidden;
+            position: relative;
+            img {
+                width: 369px;
+                height: 224px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                object-fit: cover;
+            }
+        }
+        &__link {
+            display: flex;
+            margin: 0 -7px;
+            font-family: 'Open Sans', sans-serif ;
+            a {
+                color: $accent-color;
+                text-decoration: none;
+                margin: 0 3.5px;
+                letter-spacing: 0.7px;
+                margin: 0 0 0 3.5px;
+            }
+            span {
+                color: #80809b;
+                margin: 0 3.5px 0 0;
+            }
+            &_name {
+                color: #80809b;
+                margin: 0 7px;
+            }
+        }
+        &__desc {
+            margin-top: 12px;
+            letter-spacing: 0.7px;
+            max-width: 369px;
+        }
+
+    }
+    &__btn {
+        max-width: 265px;
+    }
+}
