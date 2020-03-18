@@ -653,3 +653,70 @@ body {
         }
     }
 }
+.footer {
+    background-color: $bg-dark-color;
+}
+.block-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 161px 0;
+    &-item {
+        &_first {
+            margin-right: -54px;
+        }
+        &_third {
+            margin-right: 16px;
+        }
+        &__logo {
+            display: block;
+            width: 137px;
+            height: 28px;
+            background-image: url(../img/logo-footer.svg);
+            background-repeat: no-repeat;
+        }
+        p {
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0.6px;
+            color: #9191b5;
+        }
+        &__text {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            max-width: 369px;
+        }
+        &__title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $accent-color;
+            margin-top: 9px;
+            letter-spacing: 0.6px;
+            margin-bottom: 19px;
+        }
+        &__list {
+            list-style-type: none;
+            font-family: 'Open Sans', sans-serif;
+            color: #9191b5;
+            &_item {
+                margin-bottom: 4px;
+            }
+            li {
+                letter-spacing: 0.6px;
+            }
+        }
+        &__social {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            max-width: 143px;
+            font-family: "FontAwesome5BrandsRegular";
+            margin-top: 11px;
+            margin-left: 4px;
+            a {
+                text-decoration: none;
+                color: $accent-color;
+            }
+        }
+    }
+
+}
